@@ -1,3 +1,11 @@
+import { withRouter } from 'next/router' import WithMDX from '../../lib/with-mdx'
+
+import { lewi } from '../../lib/data/team' import Tangle from '../../components/tangle'
+
+export const page = { title: 'What is IOTA', date: '16 Feburary 2018', authors: [lewi], editUrl: 'pages/introduction/what-is-iota.mdx', }
+
+export default withRouter(props => WithMDX(props, page))
+
 # RIDE Language for Waves Smart contracts
 
 Turing-completeness of a blockchain system can be achieved through unwinding the recursive calls between multiple transactions and blocks instead of using a single one, and it is not necessary to have loops and recursion in the language itself. A script \(contract\) should be written using our RIDE language. Scala \(Waves node is written in it\) along with F\# influenced RIDE. For now,** **[**RIDE language**](https://wavesplatform.com/files/docs/white_paper_waves_smart_contracts.pdf?cache=b)** **has these main characteristics which makes it simple, expressive and bug-free:
